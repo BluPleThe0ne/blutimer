@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<!-- Init audios -->
+
+<audio id="bgmusic">
+    <source src="bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+
+
+<link rel="stylesheet" href="style.css"> 
+<title>Blu Timer</title>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+
+<center>
+<div id="toolsbar">
+    <h1>Blu Timer</h1>
+    <img id="mnoteic" src="musicnote.png">
+</div>
+</center>
+
+<!-- Play music button handler -->
+
+<script>
+
+var defaultbgmusic = document.getElementById("bgmusic"); 
+
+function playAudio() { 
+  defaultbgmusic.play(); 
+} 
+
+function pauseAudio() { 
+  defaultbgmusic.pause(); 
+} 
+
+    document.getElementById("mnoteic").addEventListener("click", playAudio);
+    
+
+
+    </script>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="timerbg">
+
+    <br>
+    <br>
+    <h2 id="h2">0:00</h2>
+
+
+</div>
+
+<script>
+    function updateTime() {
+        
+        const now = new Date();
+        
+       
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+        
+        
+        document.getElementById("h2").textContent = formattedTime;
+    }
+
+    
+    updateTime();
+
+    
+    setInterval(updateTime, 1000);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">

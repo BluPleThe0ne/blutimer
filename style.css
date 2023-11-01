@@ -1,0 +1,84 @@
+html {
+    background-color: #242424;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: 13px; 
+    }
+  
+  }
+
+
+#timerbg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5865F2;
+    width: 400px;
+    height: 170px;
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 5px #5865F2, 0 0 5px #5865F2, 0 0 5px #5865F2, 0 0 10px #5865F2, 0 0 5px #5865F2, 0 0 20px #5865F2, 0 0 20px #5865F2;
+}
+
+@keyframes scale {
+  0% {
+      width: 400px;
+      height: 200px;
+      font-size: 16px;
+
+  }
+  100% {
+    width: 480px;
+    height: 220px;
+    font-size: 21px;
+  }
+}
+
+#timerbg:hover {
+  animation: scale 0.5s ease-in-out forwards;
+}
+
+html {
+  animation: animateBg 5s ease-in-out infinite; 
+}
+
+@keyframes animateBg {
+  0% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #12153d;  
+  }
+  75% {
+    background-color: #383d8a;
+  }
+  100% {
+    background-color: #000000; 
+  }
+}
+
+
+#toolsbar {
+  height: 50px;
+  border-radius: 20px;
+  
+}
+
+#mnoteic {
+  left: 65%;
+  width: 35px;
+  height: 35px;
+}
